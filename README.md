@@ -19,3 +19,10 @@
   2.新建文件夹,其中包含action、components、constants、container、pages、reducers、store  
   3.设定类型type:constans文件夹新建loginType,用来划分登陆过程中的事件类别   
   4.设定预处理消息过程:actions文件夹新建loginAction,用来给预处理消息区分各个事件的类别
+
+
+
+
+### 十、三方库
+    
+- [react-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen)  启动页
