@@ -12,14 +12,14 @@ const RootStack = StackNavigator(
             navigationOptions: () => ({
                 header: null
             })
-        }
-    },
+        },
 
-    {
+
         Test: {
             screen: Test,
             navigationOptions: {title: "Test"}
-        }
+        },
+
     },
 
     {

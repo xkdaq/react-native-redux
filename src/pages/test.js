@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import {DrawerLayoutAndroid, StyleSheet, Text, ToastAndroid, TouchableOpacity, View} from 'react-native';
+import SplashScreen from "react-native-splash-screen";
 
 
 export default class Test extends Component<Props> {
@@ -52,6 +53,10 @@ export default class Test extends Component<Props> {
     close = () => {
         this.drawer.closeDrawer();
     };
+
+    componentDidMount() {
+        SplashScreen.hide();  //隐藏启动屏
+    }
 }
 
 
