@@ -1,9 +1,10 @@
-
 import React, {Component} from 'react';
 import {DrawerLayoutAndroid, StyleSheet, Text, ToastAndroid, TouchableOpacity, View} from 'react-native';
+import SplashScreen from "react-native-splash-screen";
 
 
 export default class Home extends Component<Props> {
+
     render() {
         var navigationView = (
             <View style={{flex: 1, backgroundColor: 'blue'}}>
@@ -36,6 +37,11 @@ export default class Home extends Component<Props> {
             </DrawerLayoutAndroid>
         );
     }
+
+    componentDidMount() {
+        SplashScreen.hide();  //隐藏启动屏
+    }
+
 
     handleDrawerOpen = () => {
         ToastAndroid.show("open drawer", ToastAndroid.SHORT);
