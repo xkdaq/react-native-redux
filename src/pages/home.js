@@ -14,7 +14,6 @@ export default class Home extends Component<Props> {
     }
 
     render() {
-
         return (
             <DrawerLayoutAndroid
                 ref={(drawer) => {
@@ -24,18 +23,24 @@ export default class Home extends Component<Props> {
                 onDrawerClose={this.handleDrawerClose}
                 onDrawerOpen={this.handleDrawerOpen}
                 drawerPosition={DrawerLayoutAndroid.positions.left}
-                renderNavigationView={() => Home.renderNavigationView()}
+                renderNavigationView={() => this.renderNavigationView()}
             >
                 <View style={[styles.textContainer, styles.drawerStyle]}>
-                    <Text style={[styles.textStyle, styles.textLarge]}>抽屉</Text>
-                    <Text style={[styles.textStyle, styles.textLarge]}>高逼格 相当简单!</Text>
-                    <Text style={[styles.textStyle, styles.textSmall]}>从左侧拖出策划菜单</Text>
 
                     <TouchableOpacity onPress={this.onDrawerOpen}>
                         <Text style={[styles.textStyle, styles.textSmall]}>点击打开侧边栏</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={this.onDrawerHide}>
+                        <Text style={[styles.textStyle, styles.textSmall]}>点击关闭侧边栏</Text>
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity onPress={() => this.open()}>
+                        <Text style={[styles.textStyle, styles.textSmall]}>点击打开侧边栏</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => this.close()}>
                         <Text style={[styles.textStyle, styles.textSmall]}>点击关闭侧边栏</Text>
                     </TouchableOpacity>
                 </View>
@@ -46,7 +51,7 @@ export default class Home extends Component<Props> {
     /**
      * 加载侧边栏
      * */
-    static renderNavigationView() {
+    renderNavigationView() {
         return (
             <DrawerPanel/>
         );
@@ -59,6 +64,18 @@ export default class Home extends Component<Props> {
     onDrawerHide = () => {
         this.drawer.closeDrawer();
     };
+
+
+    open() {
+        this.drawer &&
+        this.drawer.openDrawer();
+    }
+
+    close() {
+        this.drawer &&
+        this.drawer.closeDrawer();
+    }
+
 
     handleDrawerOpen = () => {
         ToastAndroid.show("open drawer", ToastAndroid.SHORT);
