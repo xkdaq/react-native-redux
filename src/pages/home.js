@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {DrawerLayoutAndroid, Image, StyleSheet, Text, ToastAndroid, ToolbarAndroid, View} from 'react-native';
+import {DrawerLayoutAndroid, Image, StyleSheet, ToastAndroid, ToolbarAndroid, View} from 'react-native';
 import SplashScreen from "react-native-splash-screen";
 import Swiper from 'react-native-swiper';
 import DrawerPanel from '../pages/common/drawerPanel';
@@ -109,48 +109,46 @@ export default class Home extends Component<Props> {
      * 加载banner图
      * */
     renderBanner() {
-            return (
-                <View style={styles.wrapper}>
-                    <Swiper
-                        style={styles.wrapper}
-                        height={140}
-                        autoplay={true}
-                        autoplayTimeout={4}
-                        dot={<View style={{
-                            backgroundColor: '#9B9B9B',
-                            width: 10,
-                            height: 2,
-                            borderRadius: 0,
-                            margin: 3
-                        }}/>}
-                        activeDot={<View style={{
-                            backgroundColor: '#FFFFFF',
-                            width: 10,
-                            height: 2,
-                            borderRadius: 0,
-                            margin: 3
-                        }}/>}
-                        paginationStyle={{
-                            bottom: 6,
-                        }}
-                        loop>
-                        <Image
-                            source={{uri: 'https://photo-cdn.icons8.com/assets/previews/61/b88470bb-da89-4495-ad30-3423006169331x.jpg'}}
-                            style={styles.bannerImage}/>
-                        <Image
-                            source={{uri: 'https://photo-cdn.icons8.com/assets/previews/509/a44c871d-b8ed-4b6a-9aab-4467ce9f24031x.jpg'}}
-                            style={styles.bannerImage}/>
-                        <Image
-                            source={{uri: 'https://photo-cdn.icons8.com/assets/previews/477/7676ec16-cac0-4317-8c1a-cde4b8db089b1x.jpg'}}
-                            style={styles.bannerImage}/>
-                        <Image
-                            source={{uri: 'https://photo-cdn.icons8.com/assets/previews/893/6d3c41c8-e89e-411a-8077-408f139320511x.jpg'}}
-                            style={styles.bannerImage}/>
-                    </Swiper>
-                </View>
-            );
-
-        }
+        return (
+            <View style={styles.wrapper}>
+                <Swiper
+                    style={styles.wrapper}
+                    height={140}
+                    autoplay={true}
+                    autoplayTimeout={4}
+                    dot={<View style={{
+                        backgroundColor: '#9B9B9B',
+                        width: 10,
+                        height: 2,
+                        borderRadius: 0,
+                        margin: 3
+                    }}/>}
+                    activeDot={<View style={{
+                        backgroundColor: '#FFFFFF',
+                        width: 10,
+                        height: 2,
+                        borderRadius: 0,
+                        margin: 3
+                    }}/>}
+                    paginationStyle={{
+                        bottom: 6,
+                    }}
+                    loop>
+                    <Image
+                        source={{uri: 'https://photo-cdn.icons8.com/assets/previews/61/b88470bb-da89-4495-ad30-3423006169331x.jpg'}}
+                        style={styles.bannerImage}/>
+                    <Image
+                        source={{uri: 'https://photo-cdn.icons8.com/assets/previews/509/a44c871d-b8ed-4b6a-9aab-4467ce9f24031x.jpg'}}
+                        style={styles.bannerImage}/>
+                    <Image
+                        source={{uri: 'https://photo-cdn.icons8.com/assets/previews/477/7676ec16-cac0-4317-8c1a-cde4b8db089b1x.jpg'}}
+                        style={styles.bannerImage}/>
+                    <Image
+                        source={{uri: 'https://photo-cdn.icons8.com/assets/previews/893/6d3c41c8-e89e-411a-8077-408f139320511x.jpg'}}
+                        style={styles.bannerImage}/>
+                </Swiper>
+            </View>
+        );
 
     }
 
