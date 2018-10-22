@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {StyleConfig} from "../../res/values/style";
+
+
+const headerImg = require('./../../res/drawable/img_header.png');
+const photoImg = require('./../../res/drawable/img_default_photo.png');
+const news = require('./../../res/drawable/icon_menu_news.png');
+const market = require('./../../res/drawable/icon_menu_market.png');
+const setting = require('./../../res/drawable/icon_menu_setting.png');
+const about = require('./../../res/drawable/icon_menu_about.png');
+const out = require('./../../res/drawable/icon_menu_out.png');
+const right = require('./../../res/drawable/icon_menu_right.png');
 
 /**
  * 侧边栏
@@ -13,28 +23,87 @@ export default class DrawerPanel extends Component {
 
     render() {
         return (
-            <View style={[styles.container]}>
-                <TouchableOpacity>
-                    <Text style={[styles.textStyle, styles.textSmall]}>点击关闭侧边栏</Text>
-                </TouchableOpacity>
+            <View>
+                <View style={{height: 160, alignItems: 'center'}}>
+                    <Image source={headerImg}/>
+                    <View style={{
+                        marginTop: 30,
+                        position: 'absolute',
+                        flexDirection: 'column',
+                        alignItems: 'center'
+                    }}>
+                        <Image source={photoImg}/>
+                        <Text style={{color: 'white', marginTop: 8}}>Login to make great remarks</Text>
+                        <TouchableOpacity style={styles.loginBtn}>
+                            <Text style={{color: 'white', fontSize: 10}}>login</Text>
+                        </TouchableOpacity>
+
+                    </View>
+                </View>
+
+                <View style={{
+                    height: StyleConfig.screen_height,
+                    backgroundColor: 'white'
+                }}>
+                    {this.renderItem(news, 'News')}
+                    {this.renderItem(market, 'Market')}
+                    {this.renderItem(setting, 'Setting')}
+                    {this.renderItem(about, 'About')}
+                    {this.renderItem(out, 'Log out')}
+                </View>
             </View>
         )
     }
+
+    renderItem(img, title) {
+        return (
+            <TouchableOpacity
+                //onPress={() => this.props.navigation.navigate(title)}
+                style={styles.item}
+            >
+                <View style={styles.item_left}>
+                    <Image source={img}/>
+                    <Text style={styles.item_left_text}>{title}</Text>
+                </View>
+                <Image style={styles.item_right_img} source={right}/>
+            </TouchableOpacity>
+        )
+    }
+
+
 }
 
 const styles = StyleSheet.create({
-    container: {
-        height: StyleConfig.screen_height,
-        backgroundColor: '#6699FF'
+    loginBtn: {
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+        paddingHorizontal: 16,
+        paddingVertical: 3,
+        borderWidth: 1,
+        borderColor: 'white'
     },
-    textStyle: {
-        margin: 10,
-        color: 'white',
-        textAlign: 'center'
+    item: {
+        height: 54,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        justifyContent: 'space-between'
     },
-    textSmall: {
-        fontSize: 15,
+    item_left: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 18
     },
+    item_left_text: {
+        color: '#9B9B9B',
+        fontSize: 14,
+        marginLeft: 12
+    },
+    item_right_img: {
+        marginRight: 18
+    }
 });
 
 
