@@ -33,10 +33,7 @@ export default class DrawerPanel extends Component {
                         alignItems: 'center'
                     }}>
                         <Image source={photoImg}/>
-                        <Text style={{color: 'white', marginTop: 8}}>Login to make great remarks</Text>
-                        <TouchableOpacity style={styles.loginBtn}>
-                            <Text style={{color: 'white', fontSize: 10}}>login</Text>
-                        </TouchableOpacity>
+                        <Text style={{color: 'white', marginTop: 8}}>会唱情歌的小猴子</Text>
 
                     </View>
                 </View>
@@ -45,11 +42,11 @@ export default class DrawerPanel extends Component {
                     height: StyleConfig.screen_height,
                     backgroundColor: 'white'
                 }}>
-                    {this.renderItem(news, 'News')}
-                    {this.renderItem(market, 'Market')}
-                    {this.renderItem(setting, 'Setting')}
-                    {this.renderItem(about, 'About')}
-                    {this.renderItem(out, 'Log out')}
+                    {this.renderItem(news, '新闻')}
+                    {this.renderItem(market, '娱乐')}
+                    {this.renderItem(setting, '设置')}
+                    {this.renderItem(about, '关于')}
+                    {this.renderItem(out, '退出登陆')}
                 </View>
             </View>
         )

@@ -36,7 +36,7 @@ export default class Home extends Component<Props> {
                     <ToolbarAndroid
                         navIcon={drawer}
                         onIconClicked={this.onOpenDrawer.bind(this)}
-                        title={'KoinRocket News'}
+                        title={'News'}
                         titleColor={'#4A4A4A'}
                         style={styles.toobar}
                     />
