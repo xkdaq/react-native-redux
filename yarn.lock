@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.0.0":
+"@babel/core@^7.0.0", "@babel/core@^7.1.2":
   version "7.1.2"
   resolved "http://registry.npm.taobao.org/@babel/core/download/@babel/core-7.1.2.tgz#f8d2a9ceb6832887329a7b60f9d035791400ba4e"
   integrity sha1-+NKpzraDKIcymntg+dA1eRQAuk4=
@@ -570,6 +570,13 @@
     mkdirp "^0.5.1"
     pirates "^4.0.0"
     source-map-support "^0.5.9"
+
+"@babel/runtime@^7.1.2":
+  version "7.1.2"
+  resolved "http://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.1.2.tgz#81c89935f4647706fc54541145e6b4ecfef4b8e3"
+  integrity sha1-gciZNfRkdwb8VFQRRea07P70uOM=
+  dependencies:
+    regenerator-runtime "^0.12.0"
 
 "@babel/template@^7.0.0", "@babel/template@^7.1.0", "@babel/template@^7.1.2":
   version "7.1.2"
@@ -4807,6 +4814,13 @@ react-native-drawer-layout@1.3.2:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
+react-native-modal-dropdown@^0.6.2:
+  version "0.6.2"
+  resolved "http://registry.npm.taobao.org/react-native-modal-dropdown/download/react-native-modal-dropdown-0.6.2.tgz#da6027b3546d2031fbce46242bffc95561e13599"
+  integrity sha1-2mAns1RtIDH7zkYkK//JVWHhNZk=
+  dependencies:
+    prop-types "^15.6.0"
+
 react-native-safe-area-view@0.11.0:
   version "0.11.0"
   resolved "http://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
@@ -5085,6 +5099,11 @@ regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "http://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha1-vgWtf5v30i4Fb5cmzuUBf78Z4uk=
+
+regenerator-runtime@^0.12.0:
+  version "0.12.1"
+  resolved "http://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
+  integrity sha1-+hpxVEdkwDb4xJsToIsllMn4oN4=
 
 regenerator-transform@^0.13.3:
   version "0.13.3"
