@@ -14,15 +14,22 @@
 
 `npm install --save redux-thunk`
 
-### 三.相关代码实现
-  1.创建src文件夹存放所有文件  
-  2.新建文件夹,其中包含action、components、constants、container、pages、reducers、store  
-  3.设定类型type:constans文件夹新建loginType,用来划分登陆过程中的事件类别   
-  4.设定预处理消息过程:actions文件夹新建loginAction,用来给预处理消息区分各个事件的类别
+### 三、练习
+
+1.练习启动页
+
+2.练习下拉框[react-native-modal-dropdown](https://github.com/sohobloo/react-native-modal-dropdown) 
+
+<figure class="half">
+    <img src="https://raw.githubusercontent.com/xkdaq/react-native-redux/master/screenshot/dropdown02.jpg" width="243" height="432" /> 
+</figure>
+
 
 
 
 
 ### 十、三方库
     
-- [react-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen)  启动页
+- 启动页react-native-splash-screen:https://github.com/crazycodeboy/react-native-splash-screen 
+
+- 下拉框react-native-modal-dropdown:https://github.com/sohobloo/react-native-modal-dropdown
