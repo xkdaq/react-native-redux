@@ -39,7 +39,7 @@ export default class DropDown extends Component<Props> {
 
 
     render() {
-        const dropdown_6_icon = this.state.dropdown_6_icon_heart ? require('./../res/drawable/heart.png') : require('./../res/drawable/flower.png');
+        const dropdown_6_icon = this.state.dropdown_6_icon_heart ? require('../../res/drawable/heart.png') : require('../../res/drawable/flower.png');
         return (
             <View style={styles.container}>
                 <View style={styles.row}>
@@ -142,7 +142,7 @@ export default class DropDown extends Component<Props> {
     }
 
     _dropdown_2_renderRow(rowData, rowID, highlighted) {
-        let icon = highlighted ? require('./../res/drawable/heart.png') : require('./../res/drawable/flower.png');
+        let icon = highlighted ? require('../../res/drawable/heart.png') : require('../../res/drawable/flower.png');
         let evenRow = rowID % 2;
         return (
             <TouchableHighlight underlayColor='cornflowerblue'>

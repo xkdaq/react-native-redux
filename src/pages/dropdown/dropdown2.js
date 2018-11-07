@@ -99,7 +99,7 @@ export default class DropDown2 extends Component<Props> {
 
                     <Text style={{fontSize: 10, color: '#4A4A4A'}}>Code</Text>
 
-                    <View style={{flexDirection: 'row',marginTop: 10,}}>
+                    <View style={{flexDirection: 'row', marginTop: 10,}}>
                         <TextInput
                             ref={(code) => this.code = code}
                             onFocus={() => this.code.focus()}
@@ -119,8 +119,8 @@ export default class DropDown2 extends Component<Props> {
                             style={{
                                 height: 46,
                                 width: 70,
-                                borderTopEndRadius:4,
-                                borderBottomEndRadius:4,
+                                borderTopEndRadius: 4,
+                                borderBottomEndRadius: 4,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 backgroundColor: '#1CA385',
@@ -145,7 +145,7 @@ export default class DropDown2 extends Component<Props> {
                         borderRadius: 4,
                         marginTop: 30
                     }}
-                    onPress={() => console.log('press me')}
+                    onPress={() => this.toNext()}
                 >
                     <Text style={{
                         fontSize: 14,
@@ -155,6 +155,10 @@ export default class DropDown2 extends Component<Props> {
 
             </View>
         );
+    }
+
+    toNext() {
+        this.props.navigation.navigate("CacheText")
     }
 
     _renderButtonText(rowData) {

@@ -3,12 +3,25 @@ import {StackNavigator} from "react-navigation";
 
 import Home from "./pages/home"; //首页
 import Test from "./pages/test";
-import DropDown from "./pages/dropdown";
-import DropDown2 from "./pages/dropdown2"; //测试页
+import DropDown from "./pages/dropdown/dropdown";
+import DropDown2 from "./pages/dropdown/dropdown2";
+import CacheText from "./pages/cache/cache"; //测试页
 
 const RootStack = StackNavigator(
     {
 
+
+
+
+
+
+        /**
+         * 下拉框2
+         * */
+        DropDown2: {
+            screen: DropDown2,
+            navigationOptions: {title: "Register"}
+        },
 
         /**
          * 测试轮播图
@@ -21,11 +34,13 @@ const RootStack = StackNavigator(
         },
 
         /**
-         * 下拉框2
+         * 清楚缓存
          * */
-        DropDown2: {
-            screen: DropDown2,
-            navigationOptions: {title: "Register"}
+        CacheText: {
+            screen: CacheText,
+            navigationOptions: {
+                title: "Cache"
+            }
         },
 
 
@@ -36,7 +51,6 @@ const RootStack = StackNavigator(
             screen: DropDown,
             navigationOptions: {title: "DropDown"}
         },
-
 
 
 

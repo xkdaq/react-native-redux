@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+-keep class com.facebook.cache.disk.DiskStorageCache {
+   private boolean maybeUpdateFileCacheSize();
+}
