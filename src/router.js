@@ -5,14 +5,19 @@ import Home from "./pages/home"; //首页
 import Test from "./pages/test";
 import DropDown from "./pages/dropdown/dropdown";
 import DropDown2 from "./pages/dropdown/dropdown2";
-import CacheText from "./pages/cache/cache"; //测试页
+import CacheText from "./pages/cache/cache";
+import Picker from "./pages/picker/picker"; //测试页
 
 const RootStack = StackNavigator(
     {
 
-
-
-
+        /**
+         * 相册/拍照
+         * */
+        Picker: {
+            screen: Picker,
+            navigationOptions: {title: "Picker"}
+        },
 
 
         /**
@@ -51,8 +56,6 @@ const RootStack = StackNavigator(
             screen: DropDown,
             navigationOptions: {title: "DropDown"}
         },
-
-
 
 
         /**
